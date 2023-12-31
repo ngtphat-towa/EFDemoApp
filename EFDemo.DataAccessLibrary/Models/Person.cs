@@ -14,7 +14,7 @@ namespace EFDemo.DataAccessLibrary.Models
         [StringLength(50)]
         public string LastName { get; set; }
         [Required]
-        public DateTime BirthDate { get; set; }
+        public DateTimeOffset BirthDate { get; set; }
         public List<Address> Addresses { get; set; } = new List<Address>();
         public List<Email> Emails { get; set; } = new List<Email>();
     }

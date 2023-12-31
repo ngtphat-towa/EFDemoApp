@@ -4,6 +4,7 @@ using EFDemo.DataAccessLibrary.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDemo.DataAccessLibrary.Migrations
 {
     [DbContext(typeof(PeopleDbContext))]
-    partial class PeopleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231231080052_UpdatDatatimeUTCFormat")]
+    partial class UpdatDatatimeUTCFormat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,7 +60,7 @@ namespace EFDemo.DataAccessLibrary.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Addresses");
+                    b.ToTable("Adresses");
                 });
 
             modelBuilder.Entity("EFDemo.DataAccessLibrary.Models.Email", b =>
@@ -80,7 +83,7 @@ namespace EFDemo.DataAccessLibrary.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("EmailAddresses");
+                    b.ToTable("EmailAressess");
                 });
 
             modelBuilder.Entity("EFDemo.DataAccessLibrary.Models.Person", b =>

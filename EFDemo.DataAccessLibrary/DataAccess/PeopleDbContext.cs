@@ -15,8 +15,8 @@ namespace EFDemo.DataAccessLibrary.DataAccess
         }
         public PeopleDbContext() { }
         public DbSet<Person> People { get; set; }
-        public DbSet<Address> Adresses { get; set; }
-        public DbSet<Email> EmailAressess{ get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Email> EmailAddresses { get; set; }
     }
 }
     
